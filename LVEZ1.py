@@ -1,12 +1,10 @@
 import time
 import RPi.GPIO as GPIO
-from gpiozero import LED
 
 GPIO.setwarnings(False)
 
 GPIO.setmode(GPIO.BCM)
 
-led = LED(23)  # GPIO 23 (BCM numbering)
 
 
 class Dist():
@@ -49,9 +47,4 @@ if __name__ == '__main__':
     while True:
         mes = LVEZ1.Measure(18)
         print(mes)
-        if 25 < mes < 30:
-            print("LED ON")
-            led.on()
-            time.sleep(0.2)
-            led.off()
-        time.sleep(2)
+        time.sleep(1)
