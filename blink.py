@@ -5,7 +5,7 @@ from gpiozero import LED
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
-led = LED(23)
+led = LED(23) # GPIO 23 (BCM numbering)
 
 triggered = False
 blinking = False
